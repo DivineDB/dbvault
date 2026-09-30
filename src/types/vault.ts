@@ -6,10 +6,11 @@ export interface VaultItem {
   category: ItemCategory;
   fileType?: string; // e.g., 'image/png', 'application/pdf', 'txt', 'js'
   size?: number; // bytes
-  content?: string; // Text content, secret value, or base64 data URL / preview link
+  content?: string; // Text content, secret value, or base64 data URL
   thumbnailUrl?: string;
   tags: string[];
   isFavorite: boolean;
+  inTrash?: boolean;
   createdAt: string;
   updatedAt: string;
   metadata?: {
@@ -19,6 +20,13 @@ export interface VaultItem {
     username?: string;
     notes?: string;
   };
+}
+
+export interface VaultSettings {
+  autoLockMinutes: number; // 0 = disabled, 1, 5, 15
+  customPassword?: string;
+  compactView: boolean;
+  theme: "dark" | "midnight" | "emerald";
 }
 
 export interface UserSession {

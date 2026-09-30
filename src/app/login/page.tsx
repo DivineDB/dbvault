@@ -41,11 +41,6 @@ export default function LoginPage() {
     }
   };
 
-  const fillQuickPassword = () => {
-    setPassword("hellodb");
-    setError("");
-  };
-
   return (
     <div className="relative min-h-screen flex items-center justify-center p-4 bg-[#08090d] overflow-hidden select-none">
       {/* Background Ambient Glows */}
@@ -133,19 +128,6 @@ export default function LoginPage() {
               )}
             </button>
           </form>
-
-          {/* Password Preset Chip for easy demo testing */}
-          <div className="mt-8 pt-6 border-t border-white/5 flex flex-col items-center">
-            <button
-              type="button"
-              onClick={fillQuickPassword}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-xs text-slate-400 hover:text-slate-200 transition-all cursor-pointer"
-            >
-              <KeyRound className="w-3.5 h-3.5 text-indigo-400" />
-              <span>Password: <strong className="text-indigo-300 font-mono">hellodb</strong></span>
-              <Sparkles className="w-3 h-3 text-amber-400 ml-1" />
-            </button>
-          </div>
         </div>
 
         {/* Footer info */}
